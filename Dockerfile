@@ -3,7 +3,8 @@ FROM php:8.2-cli
 WORKDIR /var/www
 
 RUN apt-get update && apt-get install -y \
-    unzip zip curl libpng-dev libonig-dev libxml2-dev
+    unzip zip curl libpng-dev libonig-dev libxml2-dev \
+    libpq-dev
 
 RUN docker-php-ext-install pdo pdo_pgsql
 
